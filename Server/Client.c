@@ -37,7 +37,7 @@ double CRAFT_XP_GAINS[rr_rarity_id_max - 1] = {1,      8,      60,     750,
                                                25e3,   1e6,    100e6,  5e9,
                                                75e9,   270e9,  800e9,  1.5e12,
                                                25e12,  150e12, 1e15,   8e15,
-                                               60e15,  900e15};;
+                                               60e15,  900e15, 100e21, 10e30};;
 
 void rr_server_client_init(struct rr_server_client *this)
 {
