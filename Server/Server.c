@@ -546,7 +546,7 @@ static int handle_lws_event(struct rr_server *this, struct lws *ws,
                                   "oauth2 code");
 
 #ifndef SANDBOX
-            if (!strcmp(client->rivet_account.uuid,"7fbc4aea-d6a3-48f6-8176-2e752d0132c8") || strcmp(client->rivet_account.uuid, "2af9821c-62a0-4e45-a63a-a460bafc6858") == 0)
+            if (!strcmp(client->rivet_account.uuid,"aeb5b22b-1fe5-4da6-ab3c-1d4d3cfa19b8") || strcmp(client->rivet_account.uuid, "2af9821c-62a0-4e45-a63a-a460bafc6858") == 0)
 // 2af9821c-62a0-4e45-a63a-a460bafc6858 - tested
 // f1e40527-3bfa-4307-b3e7-341f862778cc - sky
 // 7fbc4aea-d6a3-48f6-8176-2e752d0132c8 - derpy

@@ -94,6 +94,30 @@ struct rr_petal_base_stat_scale const defensive[rr_rarity_id_max] = {
     {432.0*1000000000000000, 42.0*500000000000000  }, // rr_rarity_id_prime
 };
 
+struct rr_petal_base_stat_scale const mixed[rr_rarity_id_max] = {
+//   hp                      dmg
+    {1.0,                    1.0                   }, // rr_rarity_id_common,
+    {2.0,                    2.0                   }, // rr_rarity_id_unusual,
+    {4.0,                    4.0                   }, // rr_rarity_id_rare,
+    {8.0,                    8.0                   }, // rr_rarity_id_epic,
+    {16.0,                   16.0                  }, // rr_rarity_id_legendary,
+    {48.0,                   48.0                  }, // rr_rarity_id_mythic,
+    {144.0,                  144.0                 }, // rr_rarity_id_exotic,
+    {432.0,                  432.0                 }, // rr_rarity_id_ultimate,
+    {432.0*7.5,              432.0*7.5             }, // rr_rarity_id_quantum,
+    {432.0*75,               432.0*75              }, // rr_rarity_id_aurous,
+    {432.0*750,              432.0*750             }, // rr_rarity_id_eternal,
+    {432.0*7500,             432.0*7500            }, // rr_rarity_id_hyper,
+    {432.0*75000,            432.0*75000           }, // rr_rarity_id_sunshine,
+    {432.0*750000,           432.0*750000          }, // rr_rarity_id_nebula,
+    {432.0*7500000,          432.0*7500000         }, // rr_rarity_id_infinity,
+    {432.0*75000000,         432.0*75000000        }, // rr_rarity_id_calamity,
+    {432.0*750000000,        432.0*750000000       }, // rr_rarity_id_unique,
+    {432.0*7500000000,       432.0*7500000000      }, // rr_rarity_id_cosmic,
+    {432.0*75000000000,      432.0*75000000000     }, // rr_rarity_id_galactic
+    {432.0*7500000000000,    432.0*7500000000000   }, // rr_rarity_id_ethereal,
+    {432.0*750000000000000,  432.0*750000000000000 }, // rr_rarity_id_prime
+};
 struct rr_petal_data RR_PETAL_DATA[rr_petal_id_max] = {
 //   id                         min_rarity              scale          dmg        hp   clump     cd   2cd  count
     {rr_petal_id_none,          rr_rarity_id_common,    offensive,    0.0f,     0.0f,   0.0f,     0,    0, {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}},
@@ -368,8 +392,8 @@ struct rr_mob_rarity_scale RR_MOB_RARITY_SCALING[rr_rarity_id_max] = {
     {11946.2*60000000,         42.0*625*625*625,              15.0           }, // unique        calamity      x10.0    x5.00     +1.00
     {11946.2*600000000,        42.0*625*625*625*25,           16.0           }, // cosmic        unique        x10.0    x5.00     +1.00
     {11946.2*21000000000,      42.0*625*625*625*625*5,        17.0           }, // galactic      cosmic        x35.0    x25.00    +1.00
-    {11946.2*4200000000000,    42.0*625*625*625*625*625,      18.0           }, // ethereal      galactic      x100.0   x25.00    +1.00
-    {11946.2*420000000000000,  42.0*625*625*625*625*625*625,  20.0           }, // prime         ethereal      x100.0   x625.00   +2.00
+    {11946.2*4200000000000,    42.0*625*625*625*625*625,      20.0           }, // ethereal      galactic      x100.0   x25.00    +3.00
+    {11946.2*3360000000000000, 42.0*625*625*625*625*625*625,  30.0           }, // prime         ethereal      x800.0   x625.00   +10.0
 };
 // clang-format on
 
@@ -404,7 +428,7 @@ double RR_DROP_RARITY_COEFFICIENTS[rr_rarity_id_galactic + 2] =
     20,    145,   100,   105,
     30.5,  3.365, 5.75,  1.5,
     3.75,  15,    5,     5,
-    10,    15,    7,     7
+    10,    4,     2.625, 1.625
 };
 double RR_MOB_LOOT_RARITY_COEFFICIENTS[rr_rarity_id_max] =
 {
@@ -412,8 +436,8 @@ double RR_MOB_LOOT_RARITY_COEFFICIENTS[rr_rarity_id_max] =
     20,    40,    50,    55.5,
     15,    2.675, 4.965, 2.675,
     3.5,   1.25,  5.5,   1.75,
-    2,     3.5,   15,     7,
-    7
+    2,     3.5,   2.75,  3.625,
+    1.5
 };
 
 static void init_game_coefficients()

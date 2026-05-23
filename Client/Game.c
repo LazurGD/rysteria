@@ -494,7 +494,7 @@ void rr_game_init(struct rr_game *this)
                             /*
                             rr_ui_h_container_init(rr_ui_container_init(), 0, 10,
                                 rr_ui_biome_button_init("Hell Creek", 0xffff0000, 0),
-                                rr_ui_biome_button_init("Ocean", 0xffcdb423, 1),
+                                rr_ui_biome_button_init("Garden", 0xffcdb423, 1),
                                 NULL
                             ),
                             */
@@ -1654,7 +1654,7 @@ void rr_game_tick(struct rr_game *this, float delta)
                 if (this->selected_biome == 0)
                     rr_renderer_draw_tile_hell_creek(this->renderer,
                                                      tile_index);
-                else
+                else if (this->selected_biome == 1)
                     rr_renderer_draw_tile_garden(this->renderer, tile_index);
                 rr_renderer_context_state_free(this->renderer, &state);
             }
