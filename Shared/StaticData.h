@@ -112,7 +112,9 @@ enum rr_rarity_id
     rr_rarity_id_unique,     // 16
     rr_rarity_id_cosmic,     // 17
     rr_rarity_id_galactic,   // 18
-    rr_rarity_id_max         // 19
+    rr_rarity_id_ethereal,   // 19
+    rr_rarity_id_prime,      // 20
+    rr_rarity_id_max         // 21
 };
 
 enum rr_petal_id
